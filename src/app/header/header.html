@@ -1,0 +1,31 @@
+<nav id="navbar" 
+     [ngClass]="isScrolled ? 'bg-[#0a0f1e]/80 backdrop-blur-xl border-b border-white/5 py-4 shadow-2xl' : 'py-6'"
+     class="fixed w-full z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center gap-3 group cursor-pointer">
+            <div>
+                <img src="images/logo.png" class="w-10 rounded-full" alt="Semicolon Logo">
+            </div>
+            <div class="flex flex-col leading-none">
+                <span class="text-xl font-bold tracking-tight text-white capitalize">Semicolon</span>
+                <span class="text-[9px] text-orange-500 font-bold tracking-widest uppercase">From Start to End</span>
+            </div>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-10 text-white">
+            <a href="#services" class="text-sm font-semibold hover:text-orange-500 transition-colors">Services</a>
+            <a href="#ai-academy" class="text-sm font-semibold hover:text-orange-500 transition-colors">Academy</a>
+            <a href="#portfolio" class="text-sm font-semibold hover:text-orange-500 transition-colors">Portfolio</a>
+            <button (click)="openAIModal('architect')" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all hover:shadow-[0_0_20px_rgba(37,99,235,0.4)]">
+                Get Started
+            </button>
+        </div>
+
+        <!-- Mobile Menu button -->
+        <button class="md:hidden text-white" id="mobile-menu-btn">
+            <i class="bi bi-list"></i>
+        </button>
+    </div>
+</nav>

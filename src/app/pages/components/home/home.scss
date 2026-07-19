@@ -1,0 +1,28 @@
+.hero-gradient {
+  // وضع لون خلفية داكن أساسي لمنع أي فراغات بيضاء
+  background-color: #060a13; 
+  
+  // دمج تدرجين دائريين (الأزرق أعلى اليمين، والبرتقالي أسفل اليسار)
+  background-image: 
+    radial-gradient(circle at top right, rgba(37, 99, 235, 0.12), transparent 50%),
+    radial-gradient(circle at 30% 80%, rgba(249, 115, 22, 0.08), transparent 50%);
+  
+  background-attachment: scroll;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+// تأثير الـ Glassmorphism للكروت وأقسام الإحصائيات
+.glass {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+// حركة مؤشر الكتابة في محاكي الكود
+@keyframes blink {
+  50% { opacity: 0; }
+}
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
