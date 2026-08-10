@@ -1,11 +1,12 @@
 import { Component, HostListener, inject } from '@angular/core';
-import { UiService } from '../shared/services/ui';
 import { LucideAngularModule } from 'lucide-angular/src/icons';
 import { NgClass } from '@angular/common';
+import { UiService } from '../../shared/services/ui';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
-  imports: [LucideAngularModule, NgClass],
+  imports: [LucideAngularModule, NgClass, RouterLink],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })

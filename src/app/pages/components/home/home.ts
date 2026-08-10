@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { LucideAngularModule } from 'lucide-angular'; // تصحيح مسار الاستيراد هنا لضمان عمل الـ Build بدون مشاكل
 import { UiService } from '../../../shared/services/ui';
-import { Header } from '../../../header/header';
+import { Header } from '../../../core/header/header';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, FormsModule, LucideAngularModule, Header],
+  imports: [CommonModule, FormsModule, LucideAngularModule],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
